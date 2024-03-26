@@ -2,13 +2,6 @@
   #include <stdio.h>
   #include <stdlib.h>
 
-  void countLineBreaks(char* s) {
-	for (int i=0; s[i] != '\0'; i++) {
-    	if(s[i] == '\n')
-        	yylineno++;
-	}
-  }
-
   char* upperCase(char* str) {
 	char* result = strdup(str);
 	int i=0;
@@ -20,8 +13,11 @@
   }
 %}
 
+%option yylineno
+
 %%
-\{[^\}]*\} { countLineBreaks(yytext); }
+\n {}
+\{[^\}]*\} { }
 \"[^"]*\"	{ printf("%d: %s -> %s\n", yylineno, yytext, "STR_VAL"); }
 begin   { printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
 bool      { printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
@@ -59,7 +55,6 @@ abc 	  { printf("%d: %s -> %s\n", yylineno, yytext, "ABC"); }
 
 [a-zA-Z]+   	{ printf("%d: %s -> %s\n", yylineno, yytext, "ID"); }
 [ \t]       ;
-\n      	{ yylineno++; }
 .         { printf("LEXICAL ERROR (%d): Unknown symbol %c\n", yylineno, yytext[0]); return 0; }
 %%
 
