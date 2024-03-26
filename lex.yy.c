@@ -542,8 +542,12 @@ char *yytext;
 	}
 	return result;
   }
-#line 546 "lex.yy.c"
-#line 547 "lex.yy.c"
+
+  void formattedPrint(char* str) {
+	printf("%d: %s -> %s\n", yylineno, yytext, str); 
+  }
+#line 550 "lex.yy.c"
+#line 551 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -760,9 +764,9 @@ YY_DECL
 		}
 
 	{
-#line 18 "file.l"
+#line 22 "file.l"
 
-#line 766 "lex.yy.c"
+#line 770 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -832,192 +836,192 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 19 "file.l"
+#line 23 "file.l"
 {}
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 20 "file.l"
+#line 24 "file.l"
 { }
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 21 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "STR_VAL"); }
+#line 25 "file.l"
+{ formattedPrint("STR_VAL"); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 22 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 26 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 23 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 27 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 24 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 28 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 25 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 29 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 26 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 30 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 27 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 31 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 28 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 32 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 29 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 33 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 30 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 34 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 31 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 35 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 32 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 36 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 33 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 37 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 34 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 38 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 35 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 39 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 36 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 40 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 37 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 41 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 38 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, upperCase(yytext)); }
+#line 42 "file.l"
+{ formattedPrint(upperCase(yytext)); }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 40 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "ASSIGN"); }
+#line 44 "file.l"
+{ formattedPrint("ASSIGN"); }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 41 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "EQ"); }
+#line 45 "file.l"
+{ formattedPrint("EQ"); }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 42 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "LT"); }
+#line 46 "file.l"
+{ formattedPrint("LT"); }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 43 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "PLUS"); }
+#line 47 "file.l"
+{ formattedPrint("PLUS"); }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 44 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "MINUS"); }
+#line 48 "file.l"
+{ formattedPrint("MINUS"); }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 45 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "TIMES"); }
+#line 49 "file.l"
+{ formattedPrint("TIMES"); }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 46 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "OVER"); }
+#line 50 "file.l"
+{ formattedPrint("OVER"); }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 47 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "LPAR"); }
+#line 51 "file.l"
+{ formattedPrint("LPAR"); }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 48 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "RPAR"); }
+#line 52 "file.l"
+{ formattedPrint("RPAR"); }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 49 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "SEMI"); }
+#line 53 "file.l"
+{ formattedPrint("SEMI"); }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 52 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "INT_VAL"); }
+#line 56 "file.l"
+{ formattedPrint("INT_VAL"); }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 53 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "REAL_VAL"); }
+#line 57 "file.l"
+{ formattedPrint("REAL_VAL"); }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 54 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "ABC"); }
+#line 58 "file.l"
+{ formattedPrint("ABC"); }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 56 "file.l"
-{ printf("%d: %s -> %s\n", yylineno, yytext, "ID"); }
+#line 60 "file.l"
+{ formattedPrint("ID"); }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 57 "file.l"
+#line 61 "file.l"
 ;
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 58 "file.l"
+#line 62 "file.l"
 { printf("LEXICAL ERROR (%d): Unknown symbol %c\n", yylineno, yytext[0]); return 0; }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 59 "file.l"
+#line 63 "file.l"
 ECHO;
 	YY_BREAK
-#line 1021 "lex.yy.c"
+#line 1025 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2034,7 +2038,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 59 "file.l"
+#line 63 "file.l"
 
 
 
