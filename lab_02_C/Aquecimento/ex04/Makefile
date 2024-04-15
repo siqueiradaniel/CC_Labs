@@ -1,10 +1,10 @@
-all: parser flex gcc 
-	@echo "Done."
+all: parser scanner gcc
+	@echo "DONE."
 
 parser: parser.y
-	bison parser.y
+	bison parser.y 
 
-flex: scanner.l
+scanner: scanner.l
 	flex scanner.l
 
 gcc: parser.c scanner.c 
@@ -12,4 +12,3 @@ gcc: parser.c scanner.c
 
 clean:
 	rm *.c *.h *.out
-
