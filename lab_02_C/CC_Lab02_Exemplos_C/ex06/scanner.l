@@ -13,7 +13,7 @@
 "1"     { return ONE; }
 "if"    { return IF; }
 "else"  { return ELSE; }
-"other" { return OTHER; }
+"other" { return OTH_ER; }
 "("     { return LPAR; }
 ")"     { return RPAR; }
 "\n"    { return ENTER; }

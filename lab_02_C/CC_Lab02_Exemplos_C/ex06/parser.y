@@ -11,7 +11,7 @@ int yylex(void);
 void yyerror(char const *s);
 %}
 
-%token ENTER LPAR RPAR ZERO ONE IF ELSE OTHER
+%token OTH_ER ENTER LPAR RPAR ZERO ONE IF ELSE 
 %precedence RPAR
 %precedence ELSE
 
@@ -23,7 +23,7 @@ stmts:
 ;
 
 stmt:
-  ifstmt | OTHER;
+  ifstmt | OTH_ER;
 
 ifstmt:
   IF LPAR expr RPAR stmt

@@ -1,5 +1,11 @@
-all: do_it
+all: flex gcc 
+	@echo "Done."
 
-do_it:
-	flex file.l
+flex: EZScanner.l
+	flex EZScanner.l
+
+gcc: lex.yy.c
 	gcc lex.yy.c -lfl
+
+clean:
+	rm *.c *.out

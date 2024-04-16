@@ -3,6 +3,7 @@
 %option nounput
 %option noinput
 
+
 %{
 #include "parser.h"
 %}
