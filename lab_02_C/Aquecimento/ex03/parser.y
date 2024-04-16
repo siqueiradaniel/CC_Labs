@@ -8,13 +8,23 @@
 int yylex(void);
 void yyerror(char const *s);
 %}
-%token IF ELSE LPAR RPAR EXP OTHER ENTER
 
+%token IF ELSE LPAR RPAR EXP OTHER ENTER
+%precedence RPAR 
+%precedence ELSE 
+     
 %%
-line: /* empty */ | stmt ENTER line;
-stmt: if-stmt | OTHER ;
-if-stmt: IF LPAR EXP RPAR stmt |
-         IF LPAR EXP RPAR stmt ELSE stmt
+line : /* empty */ 
+     | stmt ENTER line
+     ;
+
+stmt : if-stmt 
+     | OTHER 
+     ;
+
+if-stmt : IF LPAR EXP RPAR stmt 
+        | IF LPAR EXP RPAR stmt ELSE stmt 
+        ;
 %%
 
 int main (void) {

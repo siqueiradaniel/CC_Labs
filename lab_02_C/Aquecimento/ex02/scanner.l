@@ -15,6 +15,7 @@
 "/"     { return DIV; }
 "("     { return LPAR; }
 ")"     { return RPAR; }
+"^"     { return POW; }
 "\n"    { return ENTER; }
 <<EOF>> { return EOF; }
 " "     { /* ignore spaces */ }

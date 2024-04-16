@@ -8,13 +8,25 @@
 int yylex(void);
 void yyerror(char const *s);
 %}
-%token NUMBER PLUS MINUS TIMES DIV LPAR RPAR ENTER
+
+%token NUMBER PLUS MINUS TIMES DIV POW LPAR RPAR ENTER
+%left PLUS MINUS                       // Associativa a esquerda.
+%left TIMES DIV                        // Mais pra baixo, maior PRI.
+%precedence UMINUS
+%right POW 
+
 %%
-line: expr ENTER ;
-expr: expr operation expr | 
-      LPAR expr RPAR | 
-      NUMBER ;
-operation: PLUS | MINUS | TIMES | DIV
+line : expr ENTER 
+     ;
+expr : expr PLUS expr 
+     | expr MINUS expr 
+     | expr TIMES expr 
+     | expr DIV expr 
+     | MINUS expr %prec UMINUS
+     | expr POW expr 
+     | LPAR expr RPAR 
+     | NUMBER 
+     ;
 %%
 int main(void) {
     if (yyparse() == 0) printf("PARSE SUCCESSFUL!\n");

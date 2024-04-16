@@ -12,6 +12,7 @@ int result;
 %}
 
 %token NUMBER PLUS ENTER
+%left PLUS                  // Soma eh associativa a esquerda.
 
 %%
     line : expr ENTER       { result = $$; };

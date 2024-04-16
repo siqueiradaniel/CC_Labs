@@ -8,10 +8,16 @@
 int yylex(void);
 void yyerror(char const *s);
 %}
+
 %token LPAR RPAR ENTER LITERAL
+
 %%
-line: /* empty */ | expr ENTER;
-expr: LPAR expr RPAR | LITERAL
+line : /* empty */ 
+     | expr ENTER
+     ;
+expr : LPAR expr RPAR 
+     | LITERAL
+     ;
 %%
 
 int main(void) {
