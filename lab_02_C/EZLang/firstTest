@@ -1,0 +1,64 @@
+../../in//c01.ezl
+1c1
+< PARSE SUCCESSFUL!
+---
+> PARSE FAILED!
+../../in//c02.ezl
+../../in//c03.ezl
+1c1
+< PARSE SUCCESSFUL!
+---
+> PARSE FAILED!
+../../in//c04.ezl
+../../in//c05.ezl
+../../in//c06.ezl
+../../in//c07.ezl
+../../in//c08.ezl
+1c1
+< PARSE SUCCESSFUL!
+---
+> PARSE FAILED!
+../../in//c09.ezl
+../../in//c10.ezl
+../../in//lexerr01.ezl
+1c1
+< LEXICAL ERROR (7): Unknown symbol _
+---
+> LEXICAL ERROR (7): Unknown symbol @
+../../in//lexerr02.ezl
+../../in//lexerr03.ezl
+../../in//semerr01.ezl
+../../in//semerr02.ezl
+1c1
+< PARSE SUCCESSFUL!
+---
+> PARSE FAILED!
+../../in//semerr03.ezl
+../../in//semerr04.ezl
+../../in//semerr05.ezl
+../../in//semerr06.ezl
+../../in//semerr07.ezl
+1c1
+< PARSE SUCCESSFUL!
+---
+> PARSE FAILED!
+../../in//semerr08.ezl
+1c1
+< PARSE SUCCESSFUL!
+---
+> PARSE FAILED!
+../../in//synerr01.ezl
+1c1
+< SYNTAX ERROR (10): syntax error, unexpected END
+---
+> PARSE FAILED!
+../../in//synerr02.ezl
+1c1
+< SYNTAX ERROR (14): syntax error, unexpected end of file
+---
+> PARSE FAILED!
+../../in//synerr03.ezl
+1c1
+< SYNTAX ERROR (9): syntax error, unexpected EQ, expecting ASSIGN
+---
+> PARSE FAILED!
