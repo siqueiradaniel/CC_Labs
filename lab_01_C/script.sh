@@ -1,4 +1,4 @@
-IN=in
+IN=../in
 OUT=out01_c
 EXE=./a.out
 for infile in `ls $IN/*.ezl`; do
